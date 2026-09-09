@@ -35,28 +35,35 @@ See [`colors.toml`](colors.toml) for the full palette. Highlights:
 | Accent (YoRHa red) | `#a13d2f` |
 | Gold trim | `#b8942f` |
 
-## Font
+## Font (optional)
 
-Recommended: **AdwaitaMono Nerd Font Mono**. The in-game UI (see
+Omarchy's pre-installed default, **JetBrainsMono Nerd Font**, already works
+well with this theme and needs no changes. The rest of this section is for
+anyone who wants to chase the reference UI's look further — not a
+requirement.
+
+The in-game UI (see
 [reference](https://interfaceingame.com/wp-content/uploads/nierautomata/nierautomata-items.jpg))
 uses a clean geometric sans with no serifs — reportedly
 [Rodin](https://en.fontworks.co.jp/case/10971/), a proprietary Japanese
 typeface, so not something we can ship or install directly. Of the free,
-officially-packaged Nerd Fonts tried, Adwaita Mono was the only one whose
-`T`/`I`/`l`/`1` came out serif-free at terminal sizes — JetBrainsMono,
-Monaspace Xenon, IBM Plex Mono (BlexMono), and Monaspace Neon all carry small
-slab-serif ticks that read further from the reference than they first
-appear.
+officially-packaged Nerd Fonts tried, **AdwaitaMono Nerd Font Propo** was the
+closest free substitute — JetBrainsMono, Monaspace Xenon, IBM Plex Mono
+(BlexMono), and Monaspace Neon all carry small slab-serif ticks on
+`T`/`I`/`l`/`1` that read further from the reference than they first appear.
 
 ```bash
 omarchy pkg add ttf-adwaitamono-nerd
-omarchy font set "AdwaitaMono Nerd Font Mono"
+omarchy font set "AdwaitaMono Nerd Font Propo"
 ```
 
-Use the `Mono` variant specifically — it's the one with icon glyphs patched
-to a single monospace cell, which keeps waybar/omarchy-shell icons aligned.
-The plain `AdwaitaMono Nerd Font` and `AdwaitaMono Nerd Font Propo` variants
-size icons differently and can throw off terminal/bar alignment.
+Use the `Propo` variant specifically, not the plain `AdwaitaMono Nerd Font`
+or `AdwaitaMono Nerd Font Mono`. The bar's weather icon in particular is
+noticeably wider than one cell, and the `Mono` variant — the one that force-
+fits every glyph into a single monospace cell for terminal grid alignment —
+squeezes it down to roughly half size as a result. `Propo` lets icons keep
+their natural width instead. This did *not* cause any visible misalignment
+in the bar or tray in testing, but it's worth a glance after switching.
 
 ## License
 
