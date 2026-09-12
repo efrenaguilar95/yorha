@@ -65,6 +65,31 @@ squeezes it down to roughly half size as a result. `Propo` lets icons keep
 their natural width instead. This did *not* cause any visible misalignment
 in the bar or tray in testing, but it's worth a glance after switching.
 
+## Screensaver (optional)
+
+[`extras/screensaver.txt`](extras/screensaver.txt) is an ASCII-art YoRHa
+logo, generated with `omarchy-transcode-ascii`. It's kept in an `extras/`
+folder rather than the theme root because Omarchy's screensaver branding is
+global (`~/.config/omarchy/branding/screensaver.txt`), not something a theme
+install applies automatically — so this file is opt-in.
+
+To use it:
+
+```bash
+cp extras/screensaver.txt ~/.config/omarchy/branding/screensaver.txt
+omarchy-launch-screensaver force
+```
+
+Or open it for editing/preview via the built-in command:
+
+```bash
+omarchy branding screensaver text
+```
+(paste in the contents of `extras/screensaver.txt`, save, and it'll relaunch
+the screensaver automatically)
+
+To go back to the stock Omarchy logo: `omarchy branding screensaver reset`.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
