@@ -32,7 +32,7 @@ See [`colors.toml`](colors.toml) for the full palette. Highlights:
 |---|---|
 | Background (parchment) | `#e8dcc0` |
 | Foreground (ink) | `#2b2620` |
-| Accent (YoRHa red) | `#a13d2f` |
+| Accent (warm charcoal) | `#5A564A` |
 | Gold trim | `#b8942f` |
 
 ## Font (optional)
