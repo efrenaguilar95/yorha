@@ -5,8 +5,7 @@ An [Omarchy](https://omarchy.org/) theme inspired by the YoRHa faction from
 parchment/beige surfaces, dark ink-toned text, and deep red highlight accents,
 overlaid here with an original HUD-style schematic (grid, targeting rings, and
 corner tick marks) rather than any reproduced game art. It is a **light**
-theme. A dark theme based on the androids' black-and-white uniforms is planned
-as a separate companion theme.
+theme.
 
 This is a fan-made, unofficial theme not affiliated with Square Enix or
 PlatinumGames. All artwork (the background, preview images) is original,
