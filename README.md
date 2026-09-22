@@ -104,6 +104,38 @@ nothing stops you from dropping your own `unlock.png` in this theme's folder
 locally and re-running the command above — just don't redistribute a
 replacement containing Square Enix's actual artwork through this repo.
 
+## Bootloader (optional)
+
+[`extras/limine.conf`](extras/limine.conf) themes the
+[Limine](https://limine-bootloader.org/) boot menu (background, text, and
+the 16-color terminal palette) to match this theme's colors. Omarchy ships a
+single hardcoded Tokyo Night `limine.conf` and has no per-theme hook for it
+— unlike Plymouth, there's no `omarchy limine set-by-theme` command, so this
+is a **manual, opt-in edit to `/boot/limine.conf`**, not something applied
+by theme install or `omarchy theme set`.
+
+```bash
+sudo cp /boot/limine.conf /boot/limine.conf.bak
+sudoedit /boot/limine.conf
+```
+
+Copy the directives from `extras/limine.conf` into `/boot/limine.conf`,
+replacing the matching keys (`interface_branding`, `term_background`,
+`term_palette`, etc.) — leave `timeout`, `default_entry`, and your boot
+entries alone. Changes take effect on the next boot; no rebuild or reinstall
+step is needed. To revert, restore your backup, or run
+`omarchy-refresh-limine` to reset to Omarchy's stock config (this also
+re-syncs Limine's Snapper integration, so prefer the backup if you only want
+your old colors back).
+
+**Why this is opt-in rather than automatic:** two upstream Omarchy PRs
+([#4753](https://github.com/omacom/omarchy/pull/4753),
+[#4762](https://github.com/omacom/omarchy/pull/4762)) proposed
+auto-recoloring `/boot/limine.conf` on every `omarchy theme set`, via a
+passwordless-sudo root helper. A reviewer objected to a theme switch
+silently rewriting bootloader config, and the maintainer agreed, keeping
+only a manual flow — the same shape used here.
+
 ## Screensaver (optional)
 
 [`extras/screensaver.txt`](extras/screensaver.txt) is an ASCII-art YoRHa
