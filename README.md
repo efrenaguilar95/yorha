@@ -11,7 +11,7 @@ This is a fan-made, unofficial theme not affiliated with Square Enix or
 PlatinumGames. All artwork (the background, preview images) is original,
 created procedurally — no game assets are included.
 
-![Preview](preview.png)
+![Preview](yorha.webp)
 
 ## Install
 
